@@ -3,12 +3,14 @@ package com.example.demo.steps;
 import cucumber.api.java.en.When;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class SampleSteps {
+
     @When("the user says Hi!")
     public void the_user() {
         System.out.println("The user says Hi!");
@@ -18,10 +20,10 @@ public class SampleSteps {
          *
          * TODO You would normally read config.properties, use the value of cuke.profiles.active to then read the relevant cuke-{env}.propeties.
          */
-        Path pathToConfigFile = Paths.get("target/test-classes/config.properties"); // TODO Amend this path as you would normally not reference the target dir.
         try {
+            Path pathToConfigFile = Paths.get(ClassLoader.getSystemResource("config.properties").toURI().getPath());
             Files.readAllLines(pathToConfigFile, StandardCharsets.UTF_8).forEach(System.out::println);
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }

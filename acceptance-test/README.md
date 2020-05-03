@@ -1,7 +1,6 @@
 # To run in a Terminal window:
     - TODO as mvn clean install does not run the Cuke tests at the moment.
-    - TODO See path in SampleSteps.
-    
+        
     
 # To run in IntelliJ:
     -TODO as running the Runner currently outputs cuke.profiles.active=@activatedProfileThroughMaven@
