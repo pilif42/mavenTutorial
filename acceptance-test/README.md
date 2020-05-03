@@ -1,6 +1,19 @@
 # To run in a Terminal window:
-    - TODO as mvn clean install does not run the Cuke tests at the moment.
-        
+    - TODO as mvn test -Dcucumber.options="--tags @sample" -Dcucumber.options="-plugin junit:target/cucumber-reports/report.xml" does not run the Cuke tests at the moment.
+            - I added this to the pom but that did not help:
+                                <plugin>
+                                    <groupId>org.apache.maven.plugins</groupId>
+                                    <artifactId>maven-surefire-plugin</artifactId>
+                                    <version>3.0.0-M4</version>
+                                    <dependencies>
+                                        <dependency>
+                                            <groupId>org.apache.maven.surefire</groupId>
+                                            <artifactId>surefire-junit47</artifactId>
+                                            <version>3.0.0-M4</version>
+                                        </dependency>
+                                    </dependencies>
+                                </plugin>
+                                
     
 # To run in IntelliJ:
     - to build:
