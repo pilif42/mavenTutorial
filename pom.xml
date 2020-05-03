@@ -12,6 +12,7 @@
 
 	<modules>
 		<module>api</module>
+		<module>acceptance-test</module>
 	</modules>
 
 	<groupId>com.example</groupId>
