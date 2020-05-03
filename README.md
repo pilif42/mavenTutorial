@@ -4,8 +4,8 @@ To play with Maven.
 
 # To run in a Terminal window:
     - to build:
-            - default profile (local): mvn clean install
-            - dev profile: mvn clean install -P dev
+            - default Maven profile (local): mvn clean install
+            - dev Maven profile: mvn clean install -P dev
     - cd target
     - java -jar demo-0.0.1-SNAPSHOT.jar
     
@@ -14,7 +14,7 @@ To play with Maven.
     - to build:
             - open View -> Tool Windows -> Maven 
             - click the refresh button (Reimport All Maven Projects)
-            - select the required Profile
+            - select the required Maven Profile
             - run the 'clean' step followed by 'install'
     - to run:
             - add a SpringBoot Run Config pointing to DemoApplication.
@@ -30,3 +30,5 @@ curl http://localhost:8080/greeting
     - To verify that placeholders are replaced correctly in resources files:
            - mvn clean resources:resources -DtemplateMsg.per.env="Hello from Local to %s!"
            - under /mavenTutorial/target/classes, see that the placeholder has been replaced in application.properties.
+    - Note that we have activated the Spring Boot profile using the Maven profile by simply controlling the value of
+    spring.profiles.active in application.properties.
