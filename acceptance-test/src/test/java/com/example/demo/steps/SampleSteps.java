@@ -18,7 +18,7 @@ public class SampleSteps {
          *
          * TODO You would normally read config.properties, use the value of cuke.profiles.active to then read the relevant cuke-{env}.propeties.
          */
-        Path pathToConfigFile = Paths.get("src/test/resources/config.properties");
+        Path pathToConfigFile = Paths.get("target/test-classes/config.properties"); // TODO Amend this path as you would normally not reference the target dir.
         try {
             Files.readAllLines(pathToConfigFile, StandardCharsets.UTF_8).forEach(System.out::println);
         } catch (IOException e) {
