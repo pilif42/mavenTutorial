@@ -10,6 +10,16 @@ To play with Maven.
     - java -jar demo-0.0.1-SNAPSHOT.jar
     
     
+# To run in IntelliJ:
+    - to build:
+            - open View -> Tool Windows -> Maven 
+            - click the refresh button (Reimport All Maven Projects)
+            - select the required Profile
+            - run the 'clean' step followed by 'install'
+    - to run:
+            - add a SpringBoot Run Config pointing to DemoApplication.
+        
+    
 # To test
 curl http://localhost:8080/greeting
 
