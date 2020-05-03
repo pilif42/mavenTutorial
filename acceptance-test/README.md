@@ -3,7 +3,16 @@
         
     
 # To run in IntelliJ:
-    -TODO as running the Runner currently outputs cuke.profiles.active=@activatedProfileThroughMaven@
+    - to build:
+            - open View -> Tool Windows -> Maven 
+            - click the refresh button (Reimport All Maven Projects)
+            - select the required Maven Profile
+            - run the 'clean' step followed by 'install' for 'demo-cuketests'
+    - to run:
+            - create a JUnit Run Config with:
+                    - Class = com.example.demo.Runner
+                    - VM options = -ea
+                    - Use classpath of module = demo-cuketests
         
 
 # Section on placeholders used in test resources files
