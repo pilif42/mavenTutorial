@@ -6,7 +6,7 @@ To play with Maven.
     - to build:
             - default Maven profile (local): mvn clean install
             - dev Maven profile: mvn clean install -P dev
-    - cd target
+    - cd api/target
     - java -jar demo-0.0.1-SNAPSHOT.jar
     
     
@@ -15,9 +15,9 @@ To play with Maven.
             - open View -> Tool Windows -> Maven 
             - click the refresh button (Reimport All Maven Projects)
             - select the required Maven Profile
-            - run the 'clean' step followed by 'install'
+            - run the 'clean' step followed by 'install' for 'demo'
     - to run:
-            - add a SpringBoot Run Config pointing to DemoApplication.
+            - add a SpringBoot Run Config pointing to DemoApplication & using module 'demo-api'.
         
     
 # To test
