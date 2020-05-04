@@ -1,18 +1,7 @@
 # To run in a Terminal window:
-    - TODO as mvn test -Dcucumber.options="--tags @sample" -Dcucumber.options="-plugin junit:target/cucumber-reports/report.xml" does not run the Cuke tests at the moment.
-            - I added this to the pom but that did not help:
-                                <plugin>
-                                    <groupId>org.apache.maven.plugins</groupId>
-                                    <artifactId>maven-surefire-plugin</artifactId>
-                                    <version>3.0.0-M4</version>
-                                    <dependencies>
-                                        <dependency>
-                                            <groupId>org.apache.maven.surefire</groupId>
-                                            <artifactId>surefire-junit47</artifactId>
-                                            <version>3.0.0-M4</version>
-                                        </dependency>
-                                    </dependencies>
-                                </plugin>
+    - mvn clean test
+    - Note that I had to rename my runner class from Runner to RunnerTest. Otherwise, maven-surefire-plugin would not
+    pick it up and as a result, no test was run.
                                 
     
 # To run in IntelliJ:
@@ -23,7 +12,7 @@
             - run the 'clean' step followed by 'install' for 'demo-cuketests'
     - to run:
             - create a JUnit Run Config with:
-                    - Class = com.example.demo.Runner
+                    - Class = com.example.demo.RunnerTest
                     - VM options = -ea
                     - Use classpath of module = demo-cuketests
         

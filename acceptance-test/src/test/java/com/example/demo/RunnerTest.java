@@ -6,5 +6,5 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty"}, strict = false, tags = "@sample")
-public class Runner {
+public class RunnerTest {
 }
